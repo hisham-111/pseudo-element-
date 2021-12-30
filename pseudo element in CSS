@@ -1,0 +1,82 @@
+//------------------------------------------------------------------------------------(HTML code)
+<body>
+<div class="parent">
+      <div class="user"> O </div>
+        <div class="one" >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis nisi,
+           tenetur ab placeat eum! Commodi at blanditiis, necessitatibus, quas 
+          libero perspiciatis accusantium dolorum magnam in totam animi earum nesciunt!
+        </div>
+    </div>      
+
+    <div class="parent">
+      <div class="user" >A</div>
+        <div class="one">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis nisi,
+           tenetur ab placeat eum! Commodi at blanditiis, necessitatibus, quas 
+          libero perspiciatis accusantium dolorum magnam in totam animi earum nesciunt!
+        </div>
+      </div>
+
+
+    <div class="parent">
+      <div class="user">A</div>
+        <div class="one">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis nisi,
+           tenetur ab placeat eum! Commodi at blanditiis, necessitatibus, quas 
+          libero perspiciatis accusantium dolorum magnam in totam animi earum nesciunt!
+        </div>
+      </div>
+   </body>
+   
+   
+   
+   
+   //---------------------------------------------------------------------------------(CSS code)
+   
+   .parent{
+ margin-bottom:20px;
+ overflow: hidden;
+}
+  .one{
+     background-color: #eee;
+     padding:10px;
+     width: 600px;
+     float:left;
+     position:relative;
+  }
+.one::after{
+  content: "";
+  background-color: red;
+  position: absolute;
+  height: 100%;
+  width:5px;
+  right:-9px;
+  top:0;
+
+}
+
+.one::before{
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top:50%;
+  margin-top: -10px;
+  left:-20px;
+  border-width: 10px;
+  border-style:solid;
+  border-color: transparent green transparent transparent;
+}
+
+.user{
+  background-color: #eee;
+  width:50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 55.5px;
+  float:left;
+  font-size: 50px;
+  text-align:center ;
+
+}
